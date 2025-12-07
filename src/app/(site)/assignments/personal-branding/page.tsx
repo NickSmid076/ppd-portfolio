@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import VimeoPlayer from "@/components/media/VimeoPlayer";
 
 export default function PersonalBrandingPage() {
   return (
@@ -67,16 +68,8 @@ export default function PersonalBrandingPage() {
             whileHover={{ scale: 1.02, boxShadow: "0 30px 80px rgba(59, 130, 246, 0.3)" }}
             className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-2xl transition-all duration-300"
           >
-            <div className="aspect-video bg-gradient-to-br from-blue-900/20 to-purple-900/20">
-              <video
-                src="/videos/IMG_8171.MOV"
-                controls
-                playsInline
-                className="w-full h-full object-cover"
-                preload="metadata"
-              >
-                <track kind="captions" />
-              </video>
+            <div className="p-4 md:p-6">
+              <VimeoPlayer videoId="1144246835" title="Personal Branding Elevator Pitch" />
             </div>
           </motion.div>
 
